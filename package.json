@@ -1,0 +1,44 @@
+{
+  "name": "claude-preview-patcher",
+  "version": "0.1.0",
+  "description": "Create a verified Claude Desktop copy that permits secure HTTPS Preview redirects.",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "claude-preview-patcher": "./bin/claude-preview-patcher.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node ./bin/claude-preview-patcher.js --check",
+    "doctor": "node ./bin/claude-preview-patcher.js --doctor",
+    "test": "node --test test/*.test.js",
+    "test:full": "RUN_FULL_CLAUDE_PATCH_TEST=1 node --test test/integration.test.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinebers/claude-preview-patcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robinebers/claude-preview-patcher/issues"
+  },
+  "homepage": "https://github.com/robinebers/claude-preview-patcher#readme",
+  "keywords": [
+    "claude",
+    "electron",
+    "asar",
+    "macos",
+    "preview"
+  ],
+  "license": "MIT"
+}
